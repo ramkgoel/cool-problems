@@ -1,20 +1,20 @@
 def pre_process(s):
-        tokens = list(s.replace(' ', ''))
-        cur_num = ''
-        final = []
-        
-        for char in tokens:
+    tokens = list(s.replace(' ', ''))
+    cur_num = ''
+    final = []
+    
+    for char in tokens:
             if char not in '+/-*()':
-                cur_num += char
+                    cur_num += char
             else:
-                if len(cur_num) >= 1:
-                    final.append(int(cur_num))
-                cur_num = ''
-                final.append(char)
+                    if len(cur_num) >= 1:
+                            final.append(int(cur_num))
+                    cur_num = ''
+                    final.append(char)
 
-        if len(cur_num) >= 1:    
+    if len(cur_num) >= 1:    
             final.append(int(cur_num))
-        return final
+    return final
 
 def calculate(s):
     tokens = pre_process(s)
