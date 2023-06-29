@@ -1,4 +1,4 @@
-***If no parentheses. (The code for this is in simpler_evaluation_no_parentheses.py).***
+***If no parentheses. (simpler_evaluation_no_parentheses.py).***
 
 Keep track of (current answer, if there is an operation queued up, current index). **evaluate(cur_ans, op, index)**. 
 Start with evaluate(0, None, 0). Go index by index. We do index+1 because it just means we now look at the next index. cur_ans is the current answer before we look at tokens[index], and similarly op is the operation before we look at token = tokens[index]. Now:
@@ -17,6 +17,9 @@ Example: 2+2-1. Keeping track of (cur_ans, op, index).
 - evaluate(4, None, 3)
 - evaluate(4, -, 4)
 - evaluate(3, None, 5)
+
+***Now full case: including parentheses. (evaluation.py)***
+
 
 
 
