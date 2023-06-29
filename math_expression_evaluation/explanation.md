@@ -10,7 +10,7 @@ Start with evaluate(0, None, 0). (This handles the case of initial -). Go index 
 
 - Else, token must be an operation. Then **evaluate(cur_ans, op, index+1)**.
 
-Example: 2+2-1. Keeping track of (cur_ans, op, index).
+Example: 2+2-1. Keeping track of (cur_ans, op, index). *Uncomment the print statements to see evaluate statements in code*
 - evaluate(0, None, 0)
 - evaluate(2, None, 1)
 - evaluate(2, +, 2)
