@@ -5,7 +5,7 @@ Given a string s representing a valid expression, implement a basic calculator t
 Note: You are not allowed to use any built-in function which evaluates strings as mathematical expressions, such as eval().
 
 Constraints:
-- 1 <= s.length <= 3 * 105
+- 1 <= s.length <= 3 * 10^5
 - s consists of digits, '+', '-', '(', ')', and ' '.
 - s represents a valid expression.
 - '+' is not used as a unary operation (i.e., "+1" and "+(2 + 3)" is invalid).
