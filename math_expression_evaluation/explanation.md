@@ -19,6 +19,7 @@ Example: 2+2-1. Keeping track of (cur_ans, op, index). *Uncomment the print stat
 - evaluate(4, None, 3)
 - evaluate(4, -, 4)
 - evaluate(3, None, 5).
+  
 Returns 3. 
 
 ***Now full case: including parentheses. (evaluation.py)***
@@ -34,5 +35,6 @@ Example: 2+(2-1).
     - evaluate(2, None, 3)
     - evaluate(2, -, 4)
     - evaluate(1, None, 5)
-- evaluate(3, None, 6) -- from 2 and + from before, and 1 from above. 
+- evaluate(3, None, 6) -- from 2 and + from before, and 1 from above.
+   
 Returns 3. 
