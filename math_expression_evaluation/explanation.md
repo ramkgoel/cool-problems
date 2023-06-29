@@ -12,7 +12,7 @@ cur_ans is the current answer before we look at tokens[index], and similarly op 
 
 - Else, token must be an operation. Then **evaluate(cur_ans, op, index+1)**.
 
-Example: 2+2-1. Keeping track of (cur_ans, op, index). *Uncomment the print statements to see evaluate statements in code*
+Example: '2+2-1'. Keeping track of (cur_ans, op, index). *Uncomment the print statements to see evaluate statements in code*
 - evaluate(0, None, 0)
 - evaluate(2, None, 1)
 - evaluate(2, +, 2)
@@ -27,7 +27,7 @@ Returns 3.
 - If token is a '(', then basically we start a new evaluation with ans=0, index+1. We can treat the output now as just an integer! Like (2+100+9) is equivalent to just the token 101, so we process the same way now. We return the evaluation starting from where this ended.
 - If token is ')', then simply return the answer and index. **THIS IS THE KEY: the main point is that we will only encounter a ) if we are already in a (-subexpression-evaluation. So we can just return.** And this works in nested case: if (()), then when we see the second (, we start a new evaluation, which ends upon seeing the first ).
 
-Example: 2+(2-1). 
+Example: '2+(2-1)' 
 - evaluate(0, None, 0)
 - evaluate(2, None, 1)
 - evaluate(2, +, 2)
@@ -35,6 +35,7 @@ Example: 2+(2-1).
     - evaluate(2, None, 3)
     - evaluate(2, -, 4)
     - evaluate(1, None, 5)
-- evaluate(3, None, 6) -- from 2 and + from before, and 1 from above.
+    - evaluate(1, None, 6) -- returns (1,6) since 6th index is ). 
+- evaluate(3, None, 7) -- from 2 and + from before, and 1 from above.
    
 Returns 3. 
