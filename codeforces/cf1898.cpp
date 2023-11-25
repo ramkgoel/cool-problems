@@ -1,5 +1,29 @@
+#include <cassert>
+#include <cstdio>
+#include <cstring>
+#include <cstdlib>
+#include <cmath>
+#include <ctime>
+#include <cctype>
+ 
+#include <algorithm>
+#include <random>
+#include <bitset>
+#include <queue>
+#include <functional>
+#include <set>
+#include <map>
+#include <vector>
+#include <chrono>
 #include <iostream>
+#include <iomanip>
+#include <limits>
+#include <numeric>
+#include <unordered_map>
+#include <unordered_set>
+ 
 using namespace std;
+
 using ll = long long;
 #define all(x) (x).begin(), (x).end()
  
