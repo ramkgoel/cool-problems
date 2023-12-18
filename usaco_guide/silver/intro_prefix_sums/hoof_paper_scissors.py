@@ -1,11 +1,10 @@
 with open('hps.in', 'r') as file_in:
     n = int(file_in.readline().strip())
-    # convert list to which letters beat it (P means S beats it, H means P beats it, S means H beats it)
-    convert = {'P': 'S', 'H': 'P', 'S': 'H'}
+
     arr = [None for i in range(n)]
     for i in range(n):
         char = file_in.readline().strip()
-        arr[i] = convert[char]
+        arr[i] = char
 
     prefixP = [0 for i in range(n+1)]
     prefixH = [0 for i in range(n+1)]
