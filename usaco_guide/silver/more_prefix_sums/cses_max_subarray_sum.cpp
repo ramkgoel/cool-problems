@@ -24,24 +24,22 @@ void solve_dp() {
 void solve_prefix_min() {
     int n;
     cin >> n;
-    vector<int> a(n);
+    vector<ll> a(n);
     for(int i=0; i<n; i++){cin >> a[i];}
 
-    vector<int> prefix(n); // prefix[i] = sum a[0]..a[i]
-    prefix[0] = a[0];
-    for(int i=1; i<n; i++){
-        prefix[i] = prefix[i-1] + a[i];
+    vector<ll> prefix(n+1); // prefix[i] = sum a[0:i]
+    for(int i=1; i<n+1; i++){
+        prefix[i] = prefix[i-1] + a[i-1];
     }
 
-    vector<int> min_prefix(n); // min_prefix[i] = min p[0]..p[i]
-    min_prefix[0] = prefix[0];
-    for(int i=1; i<n; i++){
-        min_prefix[i] = min(min_prefix[i-1], prefix[i]);
+    vector<ll> min_prefix(n+1); // min_prefix[i] = min p[0:i]
+    for(int i=1; i<n+1; i++){
+        min_prefix[i] = min(min_prefix[i-1], prefix[i-1]);
     }
 
-    int ans = a[0];
-    for(int j=1; j<n; j++){
-        ans = max(ans, prefix[j] - min_prefix[j-1]);
+    ll ans = a[0];
+    for(int j=1; j<n+1; j++){
+        ans = max(ans, prefix[j] - min_prefix[j]);
     }
 
     cout << ans;
