@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 using ll = long long;
 #define all(x) (x).begin(), (x).end()
@@ -15,8 +17,6 @@ int main() {
     
     while (t--)
         solve();
-    
-    cout << "hii";
  
     return 0;
 }
