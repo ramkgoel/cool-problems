@@ -16,7 +16,7 @@ void solve() {
         dict[a[i]] += 1;
     }
     
-    vector<int> nums;
+    vector<ll> nums;
     for (const auto& pair : dict) {
         nums.push_back(pair.second);
     }
@@ -30,11 +30,13 @@ void solve() {
 
     ll ans = 0;
     for(int i=1; i<k; i++){
-        ans += (nums[i] * (nums[i]-1))/2 * prefix[i-1];
+        ll prod = (nums[i] * (nums[i]-1))/2 * prefix[i-1];
+        ans += prod;
     }
 
     for(int i=0; i<k; i++){
-        ans += (nums[i] * (nums[i]-1) * (nums[i]-2))/6;
+        ll prod = (nums[i] * (nums[i]-1) * (nums[i]-2))/6;
+        ans += prod;
     }
 
     cout << ans << endl; 

@@ -7,7 +7,7 @@ using ll = long long;
 #define all(x) (x).begin(), (x).end()
  
 void solve() {
-    int X;
+    ll X;
     cin >> X; 
     int curMax = 1; 
 
@@ -37,6 +37,7 @@ void solve() {
         }
     }
 
+    cout << ans.size() << endl;
     for(int i=0; i<ans.size(); i++){
         cout << ans[i] << " ";
     }
