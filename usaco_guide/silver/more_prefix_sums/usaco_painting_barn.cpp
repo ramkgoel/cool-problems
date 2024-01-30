@@ -14,7 +14,7 @@ int my_prefix[1005][1005];
 void solve() {
     int n, k;
     cin >> n >> k;
-    int x1, y1, x2, y2, max_coord=0, ans = 0; 
+    int x1, y1, x2, y2, max_coord=0, ans = 0, my_ans=0; 
     for(int i=0; i<n; i++){
         cin>>x1>>y1>>x2>>y2; 
         x2--; 
@@ -29,7 +29,6 @@ void solve() {
     // cout << prefix[-1][5] << endl;
     // cout << prefix[5][-1] << endl;
     
-    int my_ans=0; 
     for(int i=0; i<max_coord+1; i++){
         for(int j=0; j<max_coord+1; j++){
             my_prefix[i][j] = my_prefix[i-1][j] + my_prefix[i][j-1] - my_prefix[i-1][j-1] + prefix_d[i][j];
@@ -54,17 +53,15 @@ void solve() {
         }
     }
 
-    cout << ans << endl;
+    // cout << ans << endl;
     cout << my_ans << endl; 
-
-
 }
  
 int main() {
     cin.tie(0)->sync_with_stdio(false);
 
     freopen("paintbarn.in", "r", stdin);
-    freopen("paintbarn.out", "w", stdout);
+    // freopen("paintbarn.out", "w", stdout);
  
     solve(); 
  
