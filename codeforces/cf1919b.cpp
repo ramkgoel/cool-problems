@@ -1,16 +1,21 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <queue>
-#include<cmath>
-#include <map>
-
+#include <cmath>
 using namespace std;
 using ll = long long;
 #define all(x) (x).begin(), (x).end()
  
 void solve() {
-    cout << "hello";
+    int n, ans=0; 
+    char c;
+    cin>>n;
+    for(int i=0; i<n; i++){
+        cin>>c;
+        if(c=='+') ans++; 
+        else ans--; 
+    }
+    cout << abs(ans) << endl;
 }
  
 int main() {
