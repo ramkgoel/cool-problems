@@ -32,7 +32,9 @@ void solve() {
 
     sort(c.begin(), c.end(), compDec);
     sort(r.begin(), r.end(), compDec); 
-    sort(pq.begin(), pq.end()); 
+    sort(pq.begin(), pq.end());
+    
+     
 
 
 
